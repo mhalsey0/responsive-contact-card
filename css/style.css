@@ -1,0 +1,117 @@
+@import url('reset.css'); 
+body {
+    background-color: antiquewhite;
+    place-items: center;
+}
+
+.grid-container {
+    margin-top: 15px; 
+    height: 70vh; 
+    width: 90%; 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 2fr 1fr; 
+    place-items: center; 
+    background-color: coral; 
+    border-radius: 8px;
+    max-width: 900px; 
+    max-height: 450px; 
+}
+
+img {
+    border-radius: 50%;
+    max-width: 10rem; 
+    max-height: 10rem;  
+}
+
+
+
+.personal-info, .company-info {
+    text-align: center; 
+    background-color: #72ced0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+#name, #email {
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 500px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 3fr 1fr; 
+    }
+
+    .grid-wrapper {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        place-items: center; 
+          
+    }
+
+    .image {
+        grid-area: 1 / 1 / span 1 / span 2; 
+    }
+
+    .item {
+        grid-area: 2 / 1 / span 1 / span 2; 
+        width: 100%;
+    }
+
+    .personal-info {
+        grid-area: 1 / 1 / span 1 / span 1;
+          
+        align-self: start;
+        justify-self: center;  
+    }
+    .company-info {
+        grid-area: 1 / 2 / span 1 / span 1;
+        
+        align-self: Start;
+        justify-self: center; 
+        
+    }
+}
+
+@media screen and (min-width: 768px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 3fr 1fr; 
+    }
+
+    .grid-wrapper {
+        display: grid; 
+        grid-template-columns: 1fr;  
+        grid-template-rows: 1fr 1fr; 
+        place-items: center; 
+        
+          
+    }
+
+    .image{
+        grid-area: 1 / 1 / span 2 / span 1; 
+    }
+
+    .item-2 {
+        grid-area: 1 / 2 / span 2 / span 1; 
+         
+    }
+
+    .personal-info {
+        grid-area: 1 / 1 / span 1 / span 2;
+        align-self: start;
+        justify-self: center;  
+    }
+    .company-info {
+        grid-area: 2 / 1 / span 1 / span 2;
+        align-self: end;
+        justify-self: center; 
+        
+    }
+}
